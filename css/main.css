@@ -1,11 +1,48 @@
 :root {
-    --text-color: ;
-    --font-family: ;
     --body-bg-color: ;
+    --text-color: #fff;
+    --link-bg-color:  #f6b50e;
+    --main-font-family: "Axiforma", "Arial", sans-serif;
+    --footer-font-family: "Inter", "Arial", sans-serif;
 }
 
 /* FONTS */
+@font-face {
+    font-family: "Axiforma";
+    font-style: normal;
+    font-weight: 400;
+    src:url("../fonts/Axiforma-Regular.woff2") format("woff2"),
+         url("../fonts/Axiforma-Regular.woff") format("woff"); 
+    font-display: swap;
+  }
 
+@font-face {
+    font-family: "Axiforma";
+    font-style: normal;
+    font-weight: 600;
+    src:url("../fonts/Axiforma-SemiBold.woff2") format("woff2"), 
+         url("../fonts/Axiforma-SemiBold.woff") format("woff");
+    font-display: swap;
+  }
+
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src:url("../fonts/inter-v8-latin-regular.woff2") format("woff2"), 
+         url("../fonts/inter-v8-latin-regular.woff") format("woff"); 
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src:url("../fonts/inter-v8-latin-500.woff2") format("woff2"), 
+         url("../fonts/inter-v8-latin-500.woff") format("woff"); 
+    font-display: swap;
+  }
 
 html {
     height: 100%;
@@ -29,11 +66,11 @@ body {
     flex-direction: column;
     height: 100%;
     background-color: var(--body-bg-color);
-    font-family: var(--font-family);
+    font-family: var(--main-font-family);
     font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
     color: var(--text-color);
 }
 
@@ -49,7 +86,7 @@ a {
 
 .container {
     width: 100%;
-    max-width: px;
+    max-width: 1210px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -58,4 +95,76 @@ a {
 
 .main-content {
     flex-grow: 1;
+}
+
+/* HEADER */
+.header {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+    margin-bottom: 120px;
+}
+
+.logo-link {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 280px;
+}
+
+.logo-img {
+    width: 74px;
+    height: 24px;
+}
+
+.sitenav-items {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitenav-item:not(:last-child) {
+    margin-right: 32px;
+}
+
+.sitenav-item-link {
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--text-color)
+}
+
+/* HERO */
+.hero {
+    width: 611px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 550px;
+}
+
+.hero-heading {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 58px;
+    font-size: 64px;
+    line-height: 120%;
+}
+
+.hero-link-div {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-link {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 100%;
+    background-color: var(--link-bg-color);
+    color: var(--text-color);
 }
